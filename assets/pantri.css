@@ -1,0 +1,201 @@
+/* Pantri public docs — palette lifted from Theme.swift so the site and the app agree. */
+
+:root {
+  --ground: #F6F8F0;
+  --surface: #FFFFFF;
+  --ink: #141A0F;
+  --ink-2: #4C5742;
+  --ink-3: #737F68;
+  --rule: #DCE3CE;
+  --accent: #3B6D11;
+  --accent-soft: #E7F1D9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #0C110A;
+    --surface: #151D11;
+    --ink: #E9F0E1;
+    --ink-2: #AAB79F;
+    --ink-3: #7E8C74;
+    --rule: #27321F;
+    --accent: #B8E085;
+    --accent-soft: #1C2F13;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ---------- chrome ---------- */
+
+header.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.wordmark {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+header.site nav {
+  display: flex;
+  gap: 18px;
+  font-size: 15px;
+}
+
+header.site nav a {
+  color: var(--ink-2);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+header.site nav a:hover { color: var(--accent); }
+header.site nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
+footer.site {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-3);
+  font-size: 14px;
+}
+
+footer.site p { margin: 0; }
+
+/* ---------- documents ---------- */
+
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 8px 24px 40px;
+}
+
+h1 {
+  font-size: clamp(30px, 5vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin: 32px 0 8px;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 23px;
+  letter-spacing: -.01em;
+  margin: 44px 0 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  text-wrap: balance;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 26px 0 6px;
+  color: var(--ink);
+}
+
+p, li { color: var(--ink-2); }
+p { margin: 0 0 14px; }
+
+.doc > p:first-of-type { color: var(--ink-2); }
+
+ul { margin: 0 0 16px; padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+a { color: var(--accent); }
+a:hover { text-decoration: none; }
+
+strong { color: var(--ink); font-weight: 600; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .88em;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 36px 0 24px;
+}
+
+em { color: var(--ink-3); }
+
+/* ---------- landing page ---------- */
+
+.lede {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin: 0 0 28px;
+  max-width: 62ch;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin: 0 0 36px;
+  padding: 0;
+  list-style: none;
+}
+
+.cards li {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 0;
+}
+
+.cards h3 { margin: 0 0 6px; font-size: 16px; }
+.cards p { margin: 0; font-size: 15px; }
+
+dl.faq { margin: 0 0 32px; }
+dl.faq dt {
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 22px;
+}
+dl.faq dd { margin: 6px 0 0; color: var(--ink-2); }
+
+.contact {
+  background: var(--accent-soft);
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin: 32px 0;
+}
+.contact h2 {
+  border: 0;
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 20px;
+}
+.contact p { margin: 0; }

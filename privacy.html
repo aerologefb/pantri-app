@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Pantri</title>
+<meta name="description" content="Privacy Policy for Pantri, the food expiry tracker with on-device AI recipes.">
+<link rel="stylesheet" href="assets/pantri.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#129382;</text></svg>">
+</head>
+<body>
+<header class="site">
+  <a class="wordmark" href="index.html">Pantri</a>
+  <nav>
+    <a href="index.html">Support</a>
+    <a href="privacy.html" aria-current="page">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</header>
+<main class="doc">
+<h1>Privacy Policy</h1>
+<p><strong>Effective Date:</strong> June 22, 2026</p>
+<p>Pantri ("we," "our," or "us"), published by NAV-INT-LLC, is committed to protecting your privacy. This Privacy Policy explains how Pantri collects, uses, and safeguards your information when you use our iOS application.</p>
+<h2 id="1-information-we-collect">1. Information We Collect</h2>
+<h3 id="1-1-information-you-provide">1.1 Information You Provide</h3>
+<ul>
+<li><strong>Food inventory data:</strong> Items you add (names, expiry dates, quantities, prices, categories, storage locations, barcodes, notes, and optional photos).</li>
+<li><strong>Preferences:</strong> Dietary restrictions, allergies, cuisines you love or avoid, cooking skill level, spice tolerance, household size, and equipment.</li>
+<li><strong>Recipe ratings:</strong> Ratings you assign to cooked recipes (1–5 stars).</li>
+</ul>
+<h3 id="1-2-information-collected-automatically">1.2 Information Collected Automatically</h3>
+<ul>
+<li><strong>iCloud sync:</strong> If iCloud is enabled on your device, your food inventory, preferences, shopping list, and cooked recipe history are synced across your devices signed into the same iCloud account using Apple's CloudKit private database. This data is stored in your personal iCloud container (<code>iCloud.NAV-INT.Pantri</code>) and is not accessible to us.</li>
+<li><strong>Camera &amp; Photos:</strong> With your explicit permission, Pantri accesses your camera for barcode scanning and your photo library for receipt OCR. Images are processed entirely on-device. Receipt photos are not uploaded to any server.</li>
+<li><strong>Barcode lookup:</strong> When you scan a barcode, Pantri queries the Open Food Facts public database (<code>world.openfoodfacts.org</code>) to retrieve product information. The barcode number is transmitted over the network for this lookup only.</li>
+<li><strong>Subscription status:</strong> Pantri uses Apple's StoreKit 2 framework to manage subscriptions. Transaction receipts are verified on-device. We do not collect or store your payment information — all payments are processed by Apple.</li>
+</ul>
+<h3 id="1-3-ai-recipe-generation">1.3 AI Recipe Generation</h3>
+<p>Recipe generation runs <strong>entirely on your device</strong> using Apple Foundation Models (Apple Intelligence). The prompt sent to the on-device model includes your food inventory, preferences, and cooking history. <strong>No recipe data leaves your device.</strong> If your device does not support Apple Intelligence, a fallback proxy service may be used (see Section 4).</p>
+<h2 id="2-information-we-do-not-collect">2. Information We Do NOT Collect</h2>
+<p>We do <strong>not</strong> collect, store, or have access to:</p>
+<ul>
+<li>Your name, email address, or phone number</li>
+<li>Your Apple ID or iCloud credentials</li>
+<li>Your payment card details (processed entirely by Apple)</li>
+<li>Your precise location</li>
+<li>Your device's advertising identifier (IDFA)</li>
+<li>Your browsing history or usage analytics</li>
+<li>Your contacts, calendars, or other personal data</li>
+</ul>
+<h2 id="3-how-we-use-your-information">3. How We Use Your Information</h2>
+<p>All data processing happens <strong>on your device</strong> or <strong>within your personal iCloud account</strong>. We use your information to:</p>
+<ul>
+<li>Display your food inventory and track expiry dates</li>
+<li>Generate personalized recipes based on your expiring items and preferences</li>
+<li>Send local push notifications about items nearing expiry</li>
+<li>Sync your data across your own devices via iCloud</li>
+<li>Manage your Pantri Pro subscription status</li>
+<li>Calculate savings and waste statistics</li>
+</ul>
+<p>We do <strong>not</strong> use your data for advertising, profiling, or any purpose other than providing the app's core functionality.</p>
+<h2 id="4-third-party-services">4. Third-Party Services</h2>
+<h3 id="4-1-open-food-facts">4.1 Open Food Facts</h3>
+<p>Barcode lookups query the Open Food Facts API. Their privacy policy is available at <a href="https://world.openfoodfacts.org/legal" rel="noopener">world.openfoodfacts.org/legal</a>. Only the scanned barcode number is transmitted.</p>
+<h3 id="4-2-apple-services">4.2 Apple Services</h3>
+<p>Pantri relies on Apple's platform services:</p>
+<ul>
+<li><strong>iCloud (CloudKit):</strong> For cross-device sync. Governed by Apple's Privacy Policy.</li>
+<li><strong>StoreKit 2:</strong> For subscription management. Governed by Apple's Privacy Policy.</li>
+<li><strong>Apple Foundation Models:</strong> For on-device recipe generation. All processing is local.</li>
+<li><strong>Vision Framework:</strong> For on-device receipt OCR. All processing is local.</li>
+</ul>
+<h3 id="4-3-recipe-proxy-optional-fallback">4.3 Recipe Proxy (Optional Fallback)</h3>
+<p>If your device does not support Apple Intelligence and the proxy service is configured, recipe generation requests are sent to a server-side proxy. The request includes your food inventory and preferences but does <strong>not</strong> include any personally identifiable information. Proxy availability and configuration are at the discretion of the app publisher.</p>
+<h2 id="5-data-storage-and-security">5. Data Storage and Security</h2>
+<ul>
+<li><strong>On-device storage:</strong> Your data is stored locally on your device using Apple's SwiftData framework, which leverages the device's built-in encryption.</li>
+<li><strong>iCloud storage:</strong> If enabled, data syncs via CloudKit to your private iCloud database. Data is encrypted in transit and at rest by Apple. We do not have access to your iCloud data.</li>
+<li><strong>Photo storage:</strong> Item photos are stored locally in the app's Documents directory. They are not uploaded to any server.</li>
+<li><strong>Data retention:</strong> Data remains on your device and in your iCloud account until you delete it. Deleting the app removes all local data. iCloud data can be removed via your device's Settings → [Your Name] → iCloud → Manage Account Storage → Pantri.</li>
+</ul>
+<h2 id="6-your-rights-and-choices">6. Your Rights and Choices</h2>
+<ul>
+<li><strong>Access and portability:</strong> Your data is on your device and in your iCloud account.</li>
+<li><strong>Deletion:</strong> Delete items individually within the app, or delete the app entirely to remove local data. iCloud data can be removed as described in Section 5.</li>
+<li><strong>Notifications:</strong> Local notification permissions can be managed in your device's Settings → Notifications → Pantri.</li>
+<li><strong>Camera and photo access:</strong> Manage in your device's Settings → Privacy &amp; Security → Camera / Photos.</li>
+<li><strong>iCloud sync:</strong> You can disable iCloud for Pantri in your device's Settings → [Your Name] → iCloud → Show All → Pantri. The app will continue to work with local-only storage.</li>
+<li><strong>Do Not Track:</strong> Pantri does not track your activity and does not respond to "Do Not Track" signals because we do not track you in the first place.</li>
+</ul>
+<h2 id="7-children-s-privacy">7. Children's Privacy</h2>
+<p>Pantri is not directed to children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us so we can delete it.</p>
+<h2 id="8-international-users">8. International Users</h2>
+<p>Your data is stored on your device and in your personal iCloud account (operated by Apple). Apple's iCloud servers may be located in various countries. By using Pantri, you consent to Apple's data handling practices as described in Apple's Privacy Policy.</p>
+<p>Pantri complies with applicable data protection laws, including the GDPR (European Union), UK GDPR, CCPA (California), and PIPEDA (Canada). Since we do not collect or process personal data on our own servers, our obligations are limited to ensuring the app functions in a privacy-respecting manner.</p>
+<h2 id="9-california-privacy-rights-ccpa">9. California Privacy Rights (CCPA)</h2>
+<p>Under the California Consumer Privacy Act, California residents have the right to:</p>
+<ul>
+<li>Know what personal information is collected</li>
+<li>Know whether personal information is sold or disclosed and to whom</li>
+<li>Access their personal information</li>
+<li>Request deletion of their personal information</li>
+<li>Not be discriminated against for exercising privacy rights</li>
+</ul>
+<p>Since Pantri does not collect, sell, or share your personal information (all data remains on your device and in your personal iCloud account), these rights are inherently preserved. To delete your data, simply delete the app and remove iCloud data as described in Section 5.</p>
+<h2 id="10-european-privacy-rights-gdpr">10. European Privacy Rights (GDPR)</h2>
+<p>Under the General Data Protection Regulation, users in the European Economic Area, United Kingdom, and Switzerland have rights including:</p>
+<ul>
+<li><strong>Right of access:</strong> All your data is accessible within the app.</li>
+<li><strong>Right to rectification:</strong> Edit items directly in the app.</li>
+<li><strong>Right to erasure:</strong> Delete items or the app itself.</li>
+<li><strong>Right to data portability:</strong> Contact us for an export.</li>
+<li><strong>Right to object to processing:</strong> Discontinue using the app.</li>
+</ul>
+<p>The legal basis for processing your data is <strong>legitimate interest</strong> (providing the core functionality you expect from a food expiry tracker) and, where applicable, <strong>performance of a contract</strong> (your Pantri Pro subscription). Since all processing is on-device and within your personal iCloud account, the data controller is you.</p>
+<h2 id="11-changes-to-this-privacy-policy">11. Changes to This Privacy Policy</h2>
+<p>We may update this Privacy Policy from time to time. Changes will be posted within the app and are effective immediately upon posting. Your continued use of Pantri after any changes constitutes acceptance of the updated policy.</p>
+<h2 id="12-contact-us">12. Contact Us</h2>
+<p>If you have questions about this Privacy Policy or Pantri's data practices, please contact us at:</p>
+<p><strong>Email:</strong> NAV-INT-LLC@pm.me</p>
+<hr>
+<p><em>This privacy policy was last updated on June 22, 2026.</em></p>
+</main>
+<footer class="site">
+  <p>Pantri is published by NAV-INT-LLC. Questions: <a href="mailto:NAV-INT-LLC@pm.me">NAV-INT-LLC@pm.me</a></p>
+</footer>
+</body>
+</html>
