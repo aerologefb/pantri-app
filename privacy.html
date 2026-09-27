@@ -19,7 +19,7 @@
 </header>
 <main class="doc">
 <h1>Privacy Policy</h1>
-<p><strong>Effective Date:</strong> June 22, 2026</p>
+<p><strong>Effective Date:</strong> September 27, 2026</p>
 <p>Pantri ("we," "our," or "us"), published by NAV-INT-LLC, is committed to protecting your privacy. This Privacy Policy explains how Pantri collects, uses, and safeguards your information when you use our iOS application.</p>
 <h2 id="1-information-we-collect">1. Information We Collect</h2>
 <h3 id="1-1-information-you-provide">1.1 Information You Provide</h3>
@@ -30,13 +30,18 @@
 </ul>
 <h3 id="1-2-information-collected-automatically">1.2 Information Collected Automatically</h3>
 <ul>
-<li><strong>iCloud sync:</strong> If iCloud is enabled on your device, your food inventory, preferences, shopping list, and cooked recipe history are synced across your devices signed into the same iCloud account using Apple's CloudKit private database. This data is stored in your personal iCloud container (<code>iCloud.NAV-INT.Pantri</code>) and is not accessible to us.</li>
+<li><strong>iCloud sync:</strong> If iCloud is enabled on your device, your food inventory, preferences, shopping list, week plan, and cooked recipe history are synced across your devices signed into the same iCloud account using Apple's CloudKit private database. This data is stored in your personal iCloud container (<code>iCloud.NAV-INT.Pantri</code>) and is not accessible to us.</li>
 <li><strong>Camera &amp; Photos:</strong> With your explicit permission, Pantri accesses your camera for barcode scanning and your photo library for receipt OCR. Images are processed entirely on-device. Receipt photos are not uploaded to any server.</li>
 <li><strong>Barcode lookup:</strong> When you scan a barcode, Pantri queries the Open Food Facts public database (<code>world.openfoodfacts.org</code>) to retrieve product information. The barcode number is transmitted over the network for this lookup only.</li>
 <li><strong>Subscription status:</strong> Pantri uses Apple's StoreKit 2 framework to manage subscriptions. Transaction receipts are verified on-device. We do not collect or store your payment information — all payments are processed by Apple.</li>
 </ul>
 <h3 id="1-3-ai-recipe-generation">1.3 AI Recipe Generation</h3>
-<p>Recipe generation runs <strong>entirely on your device</strong> using Apple Foundation Models (Apple Intelligence). The prompt sent to the on-device model includes your food inventory, preferences, and cooking history. <strong>No recipe data leaves your device.</strong> If your device does not support Apple Intelligence, a fallback proxy service may be used (see Section 4).</p>
+<p>Recipe generation runs <strong>on your device</strong> using Apple Foundation Models (Apple Intelligence). The prompt sent to the on-device model includes your food inventory, preferences, and cooking history. <strong>No recipe data leaves your device</strong> unless you turn on Private Cloud Compute, described below. If your device does not support Apple Intelligence, a fallback proxy service may be used (see Section 4).</p>
+<p><strong>Private Cloud Compute (optional, off by default):</strong> Where Apple offers it, you can turn on "Better recipes with Private Cloud Compute" in Settings. The same prompt is then sent to Apple's Private Cloud Compute, where a larger Apple model writes your recipes. Apple designed Private Cloud Compute so that your data is used only to answer the request, is never stored, and is not accessible to Apple — and so that independent experts can verify this. We never receive it. If Private Cloud Compute can't be reached, recipes are written on your device instead, when your device supports Apple Intelligence. Turn the setting off at any time to keep recipe generation on your device.</p>
+<h3 id="1-4-household-sharing">1.4 Household Sharing</h3>
+<p>Your shopping list and week plan sync through their own area of your private iCloud database. If you start a household, the people you invite through iCloud sharing can see and change your shopping list and week plan, and iCloud shows everyone in the household the others' names. The shared list and plan are stored in your iCloud account; the names of items and meals are stored with CloudKit encryption. Members don't see your pantry, preferences, or cooking history, though a meal in the shared week plan shows its recipe — including any food from your pantry it uses. When you join someone else's household, what's still to buy on your own list is added to theirs. You can stop sharing, and members can leave, at any time in Settings → Household. We do not have access to shared data.</p>
+<h3 id="1-5-diagnostics">1.5 Diagnostics</h3>
+<p>iOS gives Pantri reports about crashes, hangs, and performance through Apple's MetricKit. They contain technical details such as the device model, the iOS and Pantri versions, and where in Pantri's code a problem happened. The reports are kept on your device for 30 days and are <strong>not sent to us</strong> unless you choose to share them from Settings → Diagnostics, for example by email. Separately, if you turn on Share With App Developers in your device's Settings → Privacy &amp; Security → Analytics &amp; Improvements, Apple sends crash reports to app developers, including us, as described in Apple's Privacy Policy.</p>
 <h2 id="2-information-we-do-not-collect">2. Information We Do NOT Collect</h2>
 <p>We do <strong>not</strong> collect, store, or have access to:</p>
 <ul>
@@ -49,12 +54,13 @@
 <li>Your contacts, calendars, or other personal data</li>
 </ul>
 <h2 id="3-how-we-use-your-information">3. How We Use Your Information</h2>
-<p>All data processing happens <strong>on your device</strong> or <strong>within your personal iCloud account</strong>. We use your information to:</p>
+<p>All data processing happens <strong>on your device</strong> or <strong>within your personal iCloud account</strong> — and, only if you turn it on, in Apple's Private Cloud Compute. We use your information to:</p>
 <ul>
 <li>Display your food inventory and track expiry dates</li>
 <li>Generate personalized recipes based on your expiring items and preferences</li>
 <li>Send local push notifications about items nearing expiry</li>
 <li>Sync your data across your own devices via iCloud</li>
+<li>Share your shopping list and week plan with the people you invite</li>
 <li>Manage your Pantri Pro subscription status</li>
 <li>Calculate savings and waste statistics</li>
 </ul>
@@ -65,10 +71,12 @@
 <h3 id="4-2-apple-services">4.2 Apple Services</h3>
 <p>Pantri relies on Apple's platform services:</p>
 <ul>
-<li><strong>iCloud (CloudKit):</strong> For cross-device sync. Governed by Apple's Privacy Policy.</li>
+<li><strong>iCloud (CloudKit):</strong> For cross-device sync and, if you start one, household sharing. Governed by Apple's Privacy Policy.</li>
 <li><strong>StoreKit 2:</strong> For subscription management. Governed by Apple's Privacy Policy.</li>
 <li><strong>Apple Foundation Models:</strong> For on-device recipe generation. All processing is local.</li>
+<li><strong>Private Cloud Compute:</strong> For recipe generation on Apple's servers, only if you turn it on. Governed by Apple's Privacy Policy.</li>
 <li><strong>Vision Framework:</strong> For on-device receipt OCR. All processing is local.</li>
+<li><strong>MetricKit:</strong> For crash and performance reports, which stay on your device unless you share them.</li>
 </ul>
 <h3 id="4-3-recipe-proxy-optional-fallback">4.3 Recipe Proxy (Optional Fallback)</h3>
 <p>If your device does not support Apple Intelligence and the proxy service is configured, recipe generation requests are sent to a server-side proxy. The request includes your food inventory and preferences but does <strong>not</strong> include any personally identifiable information. Proxy availability and configuration are at the discretion of the app publisher.</p>
@@ -78,6 +86,7 @@
 <li><strong>iCloud storage:</strong> If enabled, data syncs via CloudKit to your private iCloud database. Data is encrypted in transit and at rest by Apple. We do not have access to your iCloud data.</li>
 <li><strong>Photo storage:</strong> Item photos are stored locally in the app's Documents directory. They are not uploaded to any server.</li>
 <li><strong>Data retention:</strong> Data remains on your device and in your iCloud account until you delete it. Deleting the app removes all local data. iCloud data can be removed via your device's Settings → [Your Name] → iCloud → Manage Account Storage → Pantri.</li>
+<li><strong>Household data:</strong> When you stop sharing, the people you invited lose access and the shared list and plan are removed from their devices. When you leave a household, its list and plan are removed from your devices. Signing out of iCloud removes the list and plan from that device; they come back from iCloud when you sign in again.</li>
 </ul>
 <h2 id="6-your-rights-and-choices">6. Your Rights and Choices</h2>
 <ul>
@@ -119,7 +128,7 @@
 <p>If you have questions about this Privacy Policy or Pantri's data practices, please contact us at:</p>
 <p><strong>Email:</strong> NAV-INT-LLC@pm.me</p>
 <hr>
-<p><em>This privacy policy was last updated on June 22, 2026.</em></p>
+<p><em>This privacy policy was last updated on September 27, 2026.</em></p>
 </main>
 <footer class="site">
   <p>Pantri is published by NAV-INT-LLC. Questions: <a href="mailto:NAV-INT-LLC@pm.me">NAV-INT-LLC@pm.me</a></p>
